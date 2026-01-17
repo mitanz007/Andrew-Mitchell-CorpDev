@@ -5,28 +5,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Andrew Mitchell — Corporate Development</title>
-  <meta name="description" content="Andrew Mitchell — Head of Corporate Development & Strategy. Portfolio: https://andrew-mitchell-executive-portfolio-704555970617.us-west1.run.app/" />
+  <meta name="description" content="Andrew Mitchell — Head of Corporate Development & Strategy." />
   
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Andrew Mitchell",
-    "url": "http://linkedin.com/in/andrew-mitchell-corpdev",
-    "sameAs": [
-      "http://linkedin.com/in/andrew-mitchell-corpdev",
-      "https://andrew-mitchell-executive-portfolio-704555970617.us-west1.run.app/"
-    ],
-    "jobTitle": "Head of Corporate Development",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Ampol Australia"
-    }
-  }
-  </script>
-
   <style>
     :root {
       --primary-blue: #0a66c2;
@@ -46,7 +26,6 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* Layout Container */
     .main-container {
       max-width: 780px;
       margin: 24px auto;
@@ -56,7 +35,7 @@
     a { text-decoration: none; color: var(--primary-blue); font-weight: 600; }
     a:hover { text-decoration: underline; }
 
-    /* Cards */
+    /* CARD STYLING */
     .card {
       background: var(--card-bg);
       border-radius: 8px;
@@ -66,33 +45,33 @@
       position: relative;
     }
 
-    /* --- HERO SECTION --- */
+    /* --- HERO SECTION (Banner + Profile) --- */
     .profile-hero { padding-bottom: 24px; }
     
-    /* Dynamic Banner Image */
+    /* 1. The Banner Image (heading.jpg) */
     .hero-banner {
       height: 200px;
+      width: 100%;
       background-color: #a0b4b7;
-      background-image: url('images/heading.jpg'); 
+      background-image: url('images/heading.jpg');
       background-size: cover;
       background-position: center;
       position: relative;
     }
 
-    /* Profile Picture Area */
+    /* 2. The Profile Picture (profile.jpg) */
     .profile-pic-wrapper {
       position: absolute;
-      top: 130px; /* Overlaps the banner */
+      top: 130px; /* This pushes it down to overlap the banner's bottom edge */
       left: 24px;
       width: 160px;
       height: 160px;
       border-radius: 50%;
       border: 4px solid white;
-      background: white;
+      background-color: white;
       overflow: hidden;
-      z-index: 2;
+      z-index: 10;
     }
-    
     .profile-pic-wrapper img {
       width: 100%;
       height: 100%;
@@ -100,7 +79,7 @@
     }
 
     .hero-content {
-      margin-top: 100px; /* Space for the profile pic */
+      margin-top: 100px; /* Creates empty space for the profile pic */
       padding: 0 24px;
     }
 
@@ -141,51 +120,32 @@
       display: inline-flex;
       align-items: center;
     }
-
-    .btn-primary {
-      background-color: var(--primary-blue);
-      color: white;
-    }
+    .btn-primary { background-color: var(--primary-blue); color: white; }
     .btn-primary:hover { background-color: #004182; text-decoration: none; }
+    .btn-secondary { background-color: transparent; border-color: var(--primary-blue); color: var(--primary-blue); }
+    .btn-secondary:hover { background-color: rgba(10, 102, 194, 0.1); border-width: 2px; padding: 5px 15px; text-decoration: none; }
 
-    .btn-secondary {
-      background-color: transparent;
-      border-color: var(--primary-blue);
-      color: var(--primary-blue);
-    }
-    .btn-secondary:hover { 
-      background-color: rgba(10, 102, 194, 0.1); 
-      border-width: 2px;
-      padding: 5px 15px; 
-      text-decoration: none;
-    }
-
-    /* --- SECTIONS COMMON --- */
+    /* --- SECTION HEADERS --- */
     .section-header {
       padding: 24px 24px 0 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       margin-bottom: 16px;
     }
     .section-title { font-size: 20px; font-weight: 600; margin: 0; }
-    
-    /* --- FEATURED SECTION (Portfolio) --- */
+
+    /* --- FEATURED / PORTFOLIO GRID --- */
     .featured-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 16px;
       padding: 0 24px 24px 24px;
     }
-    
     .featured-card {
       border: 1px solid var(--border-color);
       border-radius: 8px;
-      cursor: pointer;
       display: flex;
       flex-direction: column;
-      transition: box-shadow 0.2s;
       height: 100%;
+      transition: box-shadow 0.2s;
     }
     .featured-card:hover { box-shadow: 0 0 0 1px rgba(0,0,0,0.15), 0 4px 6px rgba(0,0,0,0.1); text-decoration: none; }
     
@@ -197,31 +157,30 @@
       border-radius: 8px 8px 0 0;
     }
     .featured-img-area img { width: 100%; height: 100%; object-fit: cover; }
-    
     .featured-text-area { padding: 12px 16px; }
     .featured-title { font-size: 14px; font-weight: 600; color: var(--text-main); margin: 0 0 4px 0; }
     .featured-desc { font-size: 12px; color: var(--text-sub); margin: 0; }
 
-    /* --- EXPERIENCE & LISTS --- */
+    /* --- LIST ITEMS (Experience/Education) --- */
     .list-container { padding: 0 24px 24px 24px; }
     .list-item {
       display: flex;
-      gap: 16px;
+      gap: 12px;
       margin-bottom: 24px;
-      position: relative;
     }
     .list-item:last-child { margin-bottom: 0; }
 
-    .logo-placeholder {
+    /* LOGOS */
+    .logo-box {
       width: 48px;
       height: 48px;
-      background-color: white; 
       flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
-    .logo-placeholder img { width: 100%; height: 100%; object-fit: contain; }
+    .logo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; /* Ensures logo fits inside the square without distortion */
+    }
 
     .item-content { flex-grow: 1; border-bottom: 1px solid var(--border-color); padding-bottom: 24px; }
     .list-item:last-child .item-content { border-bottom: none; padding-bottom: 0; }
@@ -229,11 +188,10 @@
     .item-title { font-size: 16px; font-weight: 600; color: var(--text-main); margin: 0; }
     .item-subtitle { font-size: 14px; color: var(--text-main); margin: 2px 0; }
     .item-meta { font-size: 14px; color: var(--text-sub); margin: 2px 0 8px 0; }
-    .item-desc { font-size: 14px; color: var(--text-main); margin-top: 8px; line-height: 1.5; }
+    .item-desc { font-size: 14px; color: var(--text-main); line-height: 1.5; margin-top: 8px; }
     .item-desc ul { padding-left: 18px; margin: 8px 0; }
-    .item-desc li { margin-bottom: 4px; }
 
-    /* --- SKILLS --- */
+    /* --- SKILLS PILLS --- */
     .skills-container { padding: 0 24px 24px 24px; display: flex; flex-wrap: wrap; gap: 8px; }
     .skill-pill {
       border: 1px solid var(--text-sub);
@@ -243,19 +201,15 @@
       font-size: 14px;
       color: var(--text-main);
       display: inline-block;
-      transition: background-color 0.2s;
     }
-    .skill-pill:hover { background-color: #f3f2ef; border-width: 2px; padding: 5px 15px; cursor: default; }
 
-    /* Footer */
     .footer { text-align: center; color: var(--text-sub); font-size: 12px; padding: 24px; }
 
     @media (max-width: 600px) {
       .featured-grid { grid-template-columns: 1fr; }
       .hero-actions { flex-direction: column; width: 100%; }
-      .btn { justify-content: center; width: 100%; box-sizing: border-box; }
+      .btn { justify-content: center; width: 100%; }
     }
-
   </style>
 </head>
 <body>
@@ -263,15 +217,16 @@
   <div class="main-container">
 
     <div class="card profile-hero">
+      
       <div class="hero-banner"></div>
       
       <div class="profile-pic-wrapper">
-        <img src="images/profile.jpg" alt="Andrew Mitchell" onerror="this.src='https://via.placeholder.com/160?text=AM'">
+        <img src="images/profile.jpg" alt="Andrew Mitchell" onerror="this.src='https://via.placeholder.com/160?text=Photo'">
       </div>
 
       <div class="hero-content">
         <h1 class="hero-name">Andrew Mitchell</h1>
-        <p class="hero-headline">Head of Corporate Development | Strategy & M&A | Global Energy, Infrastructure & FMCG | $32bn+ Deal Experience | MBA, MCom</p>
+        <p class="hero-headline">Head of Corporate Development | Strategy & M&A | Global Energy, Infrastructure & FMCG | $32bn+ Deal Experience</p>
         <p class="hero-location">Sydney, New South Wales, Australia</p>
         
         <div class="hero-actions">
@@ -279,10 +234,7 @@
             View Executive Portfolio
           </a>
           <a href="http://linkedin.com/in/andrew-mitchell-corpdev" target="_blank" class="btn btn-secondary">
-            View LinkedIn Profile
-          </a>
-          <a href="mailto:mitchell.ae000@gmail.com" class="btn btn-secondary">
-            Email
+            View LinkedIn
           </a>
         </div>
       </div>
@@ -293,25 +245,27 @@
         <h2 class="section-title">Featured</h2>
       </div>
       <div class="featured-grid">
+        
         <a href="https://andrew-mitchell-executive-portfolio-704555970617.us-west1.run.app/" target="_blank" class="featured-card">
           <div class="featured-img-area">
-            <img src="images/1.jpg" alt="Portfolio Dashboard" onerror="this.parentNode.innerHTML='<div style=\'padding:20px;text-align:center\'>Preview 1</div>'">
+            <img src="images/1.jpg" alt="Portfolio Dashboard" onerror="this.parentNode.style.background='#eee'">
           </div>
           <div class="featured-text-area">
-            <div class="featured-title">Executive Portfolio (Interactive)</div>
-            <p class="featured-desc">Google Cloud application showcasing transaction history and strategic frameworks.</p>
+            <div class="featured-title">Executive Portfolio</div>
+            <p class="featured-desc">Interactive Google Cloud application showcasing transaction history.</p>
           </div>
         </a>
 
         <a href="https://andrew-mitchell-executive-portfolio-704555970617.us-west1.run.app/" target="_blank" class="featured-card">
           <div class="featured-img-area">
-            <img src="images/2.jpg" alt="Deal Sheet" onerror="this.parentNode.innerHTML='<div style=\'padding:20px;text-align:center\'>Preview 2</div>'">
+            <img src="images/2.jpg" alt="Deal Sheet" onerror="this.parentNode.style.background='#eee'">
           </div>
           <div class="featured-text-area">
-            <div class="featured-title">Deal Transaction Log</div>
-            <p class="featured-desc">Comprehensive view of $32bn+ in closed deal value across energy and infrastructure.</p>
+            <div class="featured-title">Transaction History</div>
+            [cite_start]<p class="featured-desc">Detailed log of $32bn+ in closed deal value[cite: 18, 22].</p>
           </div>
         </a>
+
       </div>
     </div>
 
@@ -323,7 +277,7 @@
         <p class="item-desc" style="margin-top:0;">
           I am a Strategy and Corporate Development Executive who cuts through the noise to get deals done via a hands-on approach. [cite_start]With a track record of $32bn+ in closed transaction value, I help organisations navigate complex mergers, acquisitions, and divestments working alongside business teams and functional advisors. [cite: 20-22]
           <br><br>
-          My experience spans the full deal lifecycle across highly regulated sectors including Energy & Fuels (Ampol), Global Infrastructure (Jacobs), and FMCG (Coca-Cola). [cite_start]I believe the best strategies are the practical ones—those that can be executed on time, on budget, and with clear value for shareholders. [cite: 23-28]
+          [cite_start]My experience spans the full deal lifecycle across highly regulated sectors including Energy & Fuels (Ampol), Global Infrastructure (Jacobs), and FMCG (Coca-Cola). [cite: 23-28]
         </p>
       </div>
     </div>
@@ -335,15 +289,15 @@
       <div class="list-container">
         
         <div class="list-item">
-          <div class="logo-placeholder">
-            <img src="images/ampol.png" alt="Ampol" onerror="this.style.display='none'">
+          <div class="logo-box">
+            <img src="images/ampol.png" alt="Ampol Logo" onerror="this.style.opacity='0.2'">
           </div>
           <div class="item-content">
             <h3 class="item-title">Head of Corporate Development</h3>
             <div class="item-subtitle">Ampol Australia</div>
             <div class="item-meta">Jan 2023 - Present · 3 yrs 1 mo</div>
             <div class="item-desc">
-              Ampol is Australia's largest transport energy provider (ASX50) generating $35 billion revenue.
+              [cite_start]Ampol is Australia's largest transport energy provider (ASX50) generating $35 billion revenue. [cite: 30-34]
               <ul>
                 [cite_start]<li>Significantly contributed to inorganic growth options and long-term aspirations in support of Group Strategic Plan. [cite: 35]</li>
                 [cite_start]<li>Led the evaluation of potential large-scale acquisitions (over A$1B) within the downstream energy sector. [cite: 39]</li>
@@ -354,8 +308,8 @@
         </div>
 
         <div class="list-item">
-          <div class="logo-placeholder">
-            <img src="images/ccep.png" alt="CCEP" onerror="this.style.display='none'">
+          <div class="logo-box">
+            <img src="images/ccep.png" alt="CCEP Logo" onerror="this.style.opacity='0.2'">
           </div>
           <div class="item-content">
             <h3 class="item-title">Director, Mergers and Acquisitions</h3>
@@ -372,8 +326,8 @@
         </div>
 
         <div class="list-item">
-          <div class="logo-placeholder">
-            <img src="images/asciano.png" alt="Asciano" onerror="this.style.display='none'">
+          <div class="logo-box">
+            <img src="images/asciano.png" alt="Asciano Logo" onerror="this.style.opacity='0.2'">
           </div>
           <div class="item-content">
             <h3 class="item-title">Manager, Strategy & Corporate Development</h3>
@@ -389,8 +343,8 @@
         </div>
 
         <div class="list-item">
-          <div class="logo-placeholder">
-            <img src="images/jacobs.png" alt="Jacobs" onerror="this.style.display='none'">
+          <div class="logo-box">
+            <img src="images/jacobs.png" alt="Jacobs Logo" onerror="this.style.opacity='0.2'">
           </div>
           <div class="item-content">
             <h3 class="item-title">Analyst, Corporate Finance</h3>
@@ -398,7 +352,7 @@
             <div class="item-meta">Dec 2009 - Dec 2014 · 5 yrs 1 mo</div>
             <div class="item-desc">
               <ul>
-                [cite_start]<li>Led due diligence and integration processes for the A$1.3 billion merger with Jacobs Group. [cite: 69]</li>
+                [cite_start]<li>Led the due diligence and integration processes for the A$1.3 billion merger with Jacobs Group. [cite: 69]</li>
                 [cite_start]<li>Executed 9 M&A transactions (5 offshore, 4 domestic) totalling over A$130 million. [cite: 72]</li>
               </ul>
             </div>
@@ -406,8 +360,8 @@
         </div>
 
         <div class="list-item">
-          <div class="logo-placeholder">
-            <img src="images/abnamro.png" alt="ABN AMRO" onerror="this.style.display='none'">
+          <div class="logo-box">
+            <img src="images/abnamro.png" alt="ABN AMRO Logo" onerror="this.style.opacity='0.2'">
           </div>
           <div class="item-content">
             <h3 class="item-title">Analyst, Investment Banking</h3>
@@ -420,8 +374,8 @@
         </div>
         
         <div class="list-item">
-          <div class="logo-placeholder">
-            <img src="images/fonterra.png" alt="Fonterra" onerror="this.style.display='none'">
+          <div class="logo-box">
+            <img src="images/fonterra.png" alt="Fonterra Logo" onerror="this.style.opacity='0.2'">
           </div>
           <div class="item-content">
             <h3 class="item-title">Strategy Analyst</h3>
@@ -443,8 +397,8 @@
       <div class="list-container">
         
         <div class="list-item">
-          <div class="logo-placeholder">
-             <img src="images/macquarie.png" alt="MGSM" onerror="this.style.display='none'">
+          <div class="logo-box">
+             <img src="images/macquarie.png" alt="MGSM" onerror="this.style.opacity='0.2'">
           </div>
           <div class="item-content">
             <h3 class="item-title">Macquarie Graduate School of Management</h3>
@@ -453,8 +407,8 @@
         </div>
         
         <div class="list-item">
-          <div class="logo-placeholder">
-             <img src="images/otago.png" alt="Otago" onerror="this.style.display='none'">
+          <div class="logo-box">
+             <img src="images/otago.png" alt="Otago" onerror="this.style.opacity='0.2'">
           </div>
           <div class="item-content">
             <h3 class="item-title">University of Otago</h3>
@@ -463,8 +417,8 @@
         </div>
         
         <div class="list-item">
-          <div class="logo-placeholder">
-             <img src="images/richmond.png" alt="Richmond" onerror="this.style.display='none'">
+          <div class="logo-box">
+             <img src="images/richmond.png" alt="Richmond" onerror="this.style.opacity='0.2'">
           </div>
           <div class="item-content">
             <h3 class="item-title">University of Richmond</h3>
@@ -477,21 +431,21 @@
 
     <div class="card">
       <div class="section-header">
-        <h2 class="section-title">Top Skills & Awards</h2>
+        <h2 class="section-title">Skills & Awards</h2>
+      </div>
+      <div class="skills-container" style="padding-bottom:0;">
+        <span class="skill-pill">Corporate Development</span>
+        <span class="skill-pill">M&A Execution</span>
+        <span class="skill-pill">Financial Modeling</span>
+        <span class="skill-pill">Strategy</span>
+        <span class="skill-pill">Deal Origination</span>
+        <span class="skill-pill">Due Diligence</span>
+        <span class="skill-pill">People Management</span>
       </div>
       <div class="list-container">
-        <div class="skills-container" style="padding:0 0 16px 0;">
-          <span class="skill-pill">Corporate Development</span>
-          <span class="skill-pill">M&A Execution</span>
-          <span class="skill-pill">Financial Modeling</span>
-          <span class="skill-pill">Strategy</span>
-          <span class="skill-pill">Deal Origination</span>
-          <span class="skill-pill">Due Diligence</span>
-          <span class="skill-pill">People Management</span>
-        </div>
-        <div class="item-desc">
+        <p class="item-desc">
           [cite_start]<strong>Honors:</strong> Deal of the Year Award 2008 • Customer & Product Capability Award • Innovation Award [cite: 9-10]
-        </div>
+        </p>
       </div>
     </div>
 
