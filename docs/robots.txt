@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mitanz007.github.io/Andrew-Mitchell-CorpDev/sitemap.xml
