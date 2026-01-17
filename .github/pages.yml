@@ -1,1 +1,4 @@
-<meta name="google-site-verification" content="PkhtXZtzenpVW_MKNT1-oPVaG5hw4430p7pKzx8-E50" />
+- name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './docs'
