@@ -104,7 +104,6 @@
     }
 
     .hero-content {
-      /* Adjusted spacing since profile pic is gone */
       margin-top: 24px; 
       padding: 0 24px;
     }
@@ -200,6 +199,28 @@
     .item-desc ul { padding-left: 18px; margin: 8px 0; }
     .item-desc li { margin-bottom: 4px; }
 
+    /* PDF ATTACHMENT LINK STYLE */
+    .doc-link {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 10px;
+      padding: 6px 10px;
+      background-color: #f3f2ef;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-main);
+      border: 1px solid transparent;
+      transition: all 0.2s;
+    }
+    .doc-link:hover {
+      background-color: #eef3f8;
+      border-color: var(--primary-blue);
+      color: var(--primary-blue);
+      text-decoration: none;
+    }
+    .doc-icon { margin-right: 6px; fill: #d32f2f; }
+
     /* SKILLS */
     .skills-container { padding: 0 24px 24px 24px; display: flex; flex-wrap: wrap; gap: 8px; }
     .skill-pill {
@@ -240,8 +261,8 @@
           <a href="https://www.linkedin.com/in/andrew-mitchell-4959415" target="_blank" class="btn btn-secondary">
             View LinkedIn Profile
           </a>
-          <a href="mailto:mitchell.ae000@gmail.com" class="btn btn-secondary">
-            Email Me
+          <a href="files/Portfolio_Experience.pdf" target="_blank" class="btn btn-secondary">
+            Download Resume (PDF)
           </a>
         </div>
       </div>
@@ -262,12 +283,12 @@
           </div>
         </a>
         
-        <a href="https://andrew-mitchell-executive-portfolio-704555970617.us-west1.run.app/" target="_blank" class="featured-card">
+        <a href="files/Portfolio_Experience.pdf" target="_blank" class="featured-card">
           <div class="featured-img-area">
-            <img src="images/ampol.png" alt="Transaction History" style="object-fit:contain; padding:20px;" onerror="this.parentNode.innerHTML='Deal Log'">
+            <img src="images/ampol.png" alt="Transaction History" style="object-fit:contain; padding:20px;" onerror="this.parentNode.innerHTML='PDF Download'">
           </div>
           <div class="featured-text-area">
-            <div class="featured-title">Transaction History</div>
+            <div class="featured-title">Download Full Portfolio (PDF)</div>
             <div class="featured-desc">Detailed log of $32bn+ in closed deal value across energy and infrastructure.</div>
           </div>
         </a>
@@ -303,8 +324,11 @@
               <ul>
                 <li>Significantly contributed to inorganic growth options and long-term aspirations in support of Group Strategic Plan.</li>
                 <li>Led the evaluation of potential large-scale acquisitions (over A$1B) within the downstream energy sector.</li>
-                <li>Oversaw business unit transaction governance and direction, including minority investments, growth options, and divestments.</li>
               </ul>
+              <a href="files/Ampol_Summary.pdf" target="_blank" class="doc-link">
+                <svg class="doc-icon" viewBox="0 0 24 24" width="16" height="16"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+                Contribution Summary (PDF)
+              </a>
             </div>
           </div>
         </div>
@@ -321,8 +345,11 @@
               <ul>
                 <li>Provided strategic counsel and executed on key regional Asia Pacific M&A and partnering opportunities.</li>
                 <li>Managed brand divestments valued at over A$300m, strategically aligning the portfolio with the Coca-Cola system.</li>
-                <li>Executed beer portfolio and JV divestment, further aligning the portfolio with a non-alcoholic ready-to-drink (NARTD) focus.</li>
               </ul>
+              <a href="files/CCEP_Summary.pdf" target="_blank" class="doc-link">
+                <svg class="doc-icon" viewBox="0 0 24 24" width="16" height="16"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+                Contribution Summary (PDF)
+              </a>
             </div>
           </div>
         </div>
@@ -340,6 +367,10 @@
                 <li>Led due diligence and separation workstreams for the A$12 billion consortium takeover by Qube/Brookfield.</li>
                 <li>Managed acquisitions and divestments totalling A$350 million to align the portfolio with strategic objectives.</li>
               </ul>
+              <a href="files/Asciano_Summary.pdf" target="_blank" class="doc-link">
+                <svg class="doc-icon" viewBox="0 0 24 24" width="16" height="16"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+                Contribution Summary (PDF)
+              </a>
             </div>
           </div>
         </div>
@@ -357,6 +388,10 @@
                 <li>Led the due diligence and integration processes for the A$1.3 billion merger with Jacobs Group.</li>
                 <li>Executed 9 M&A transactions (5 offshore, 4 domestic) totalling over A$130 million.</li>
               </ul>
+              <a href="files/Jacobs_Summary.pdf" target="_blank" class="doc-link">
+                <svg class="doc-icon" viewBox="0 0 24 24" width="16" height="16"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+                Contribution Summary (PDF)
+              </a>
             </div>
           </div>
         </div>
@@ -371,6 +406,11 @@
             <div class="item-meta">Feb 2007 - Jan 2009 (2 years) | New Zealand & Australia</div>
             <div class="item-desc">
               Supported execution of major transactions including Carlyle's A$2.3bn acquisition of Coates Hire.
+              <br>
+              <a href="files/ABN_Summary.pdf" target="_blank" class="doc-link">
+                <svg class="doc-icon" viewBox="0 0 24 24" width="16" height="16"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+                Contribution Summary (PDF)
+              </a>
             </div>
           </div>
         </div>
@@ -385,6 +425,11 @@
             <div class="item-meta">Jan 2004 - Jan 2007 (3 years 1 month)</div>
             <div class="item-desc">
               Group Strategy role providing strategic problem solving and competitive/market analysis for global acquisitions.
+              <br>
+              <a href="files/Fonterra_Summary.pdf" target="_blank" class="doc-link">
+                <svg class="doc-icon" viewBox="0 0 24 24" width="16" height="16"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+                Contribution Summary (PDF)
+              </a>
             </div>
           </div>
         </div>
@@ -433,7 +478,7 @@
 
     <section class="card">
       <div class="section-header">
-        <h2 class="section-title">Skills & Awards</h2>
+        <h2 class="section-title">Skills & Publications</h2>
       </div>
       <div class="content-padding">
         <div class="skills-container" style="padding:0 0 16px 0;">
@@ -445,9 +490,16 @@
           <span class="skill-pill">Due Diligence</span>
           <span class="skill-pill">People Management</span>
         </div>
-        <p style="font-size: 14px; color: var(--text-main);">
+        
+        <p style="font-size: 14px; color: var(--text-main); margin-bottom: 12px;">
           <strong>Honors:</strong> Deal of the Year Award 2008 • Customer & Product Capability Award • Innovation Award
         </p>
+
+        <a href="files/Thesis_Strategy.pdf" target="_blank" class="doc-link">
+          <svg class="doc-icon" viewBox="0 0 24 24" width="16" height="16"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+          Research Publication: Strategic Alignment for High Growth (PDF)
+        </a>
+
       </div>
     </section>
 
