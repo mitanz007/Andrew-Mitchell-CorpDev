@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XRJRV4241"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -9,6 +10,9 @@
 
     gtag('config', 'G-4XRJRV4241');
   </script>
+
+  <!-- LinkedIn Badge Script -->
+  <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 
   <meta name="google-site-verification" content="PkhtXZtzenpVW_MKNT1-oPVaG5hw4430p7pKzx8-E50" />
   <meta charset="utf-8" />
@@ -25,16 +29,16 @@
   
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Andrew Mitchell — Corporate Development" />
-  <meta name="twitter:description" content="Connect on LinkedIn: https://www.linkedin.com/in/andrew-mitchell-4959415" />
+  <meta name="twitter:description" content="Connect on LinkedIn: https://www.linkedin.com/in/andrew-mitchell-corpdev" />
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Andrew Mitchell",
-    "url": "https://www.linkedin.com/in/andrew-mitchell-4959415",
+    "url": "https://www.linkedin.com/in/andrew-mitchell-corpdev",
     "sameAs": [
-      "https://www.linkedin.com/in/andrew-mitchell-4959415",
+      "https://www.linkedin.com/in/andrew-mitchell-corpdev",
       "https://github.com/mitanz007/Andrew-Mitchell-CorpDev",
       "https://andrew-mitchell-executive-portfolio-704555970617.us-west1.run.app/"
     ],
@@ -199,6 +203,27 @@
     .item-desc ul { padding-left: 18px; margin: 8px 0; }
     .item-desc li { margin-bottom: 4px; }
 
+    /* INFOGRAPHICS STYLING */
+    .infographic-block {
+      margin-top: 15px;
+      margin-bottom: 10px;
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .infographic-block img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .visual-summary-container {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 12px;
+    }
+
     /* PDF ATTACHMENT LINK STYLE */
     .doc-link {
       display: inline-flex;
@@ -246,6 +271,7 @@
 
   <div class="main-container">
 
+    <!-- HERO SECTION -->
     <header class="card profile-hero">
       <div class="hero-banner"></div>
 
@@ -258,7 +284,7 @@
           <a href="https://andrew-mitchell-executive-portfolio-704555970617.us-west1.run.app/" target="_blank" class="btn btn-primary">
             View Executive Portfolio
           </a>
-          <a href="https://www.linkedin.com/in/andrew-mitchell-4959415" target="_blank" class="btn btn-secondary">
+          <a href="https://www.linkedin.com/in/andrew-mitchell-corpdev" target="_blank" class="btn btn-secondary">
             View LinkedIn Profile
           </a>
           <a href="files/Portfolio_Experience.pdf" target="_blank" class="btn btn-secondary">
@@ -268,6 +294,7 @@
       </div>
     </header>
 
+    <!-- FEATURED / LINKS -->
     <section class="card">
       <div class="section-header">
         <h2 class="section-title">Featured</h2>
@@ -295,6 +322,7 @@
       </div>
     </section>
 
+    <!-- ABOUT TEXT -->
     <section class="card">
       <div class="section-header">
         <h2 class="section-title">About</h2>
@@ -305,12 +333,44 @@
       </div>
     </section>
 
+    <!-- CAREER VISUAL SNAPSHOT -->
+    <section class="card">
+        <div class="section-header">
+          <h2 class="section-title">Career Snapshot</h2>
+        </div>
+        <div class="content-padding">
+          <div class="visual-summary-container">
+            <!-- Executive Summary Banner -->
+            <div class="infographic-block">
+                <img src="07_Executive_Summary_Banner.jpg" alt="Executive Summary Banner: $32B+ Value, 20+ Years Experience" loading="lazy">
+            </div>
+            
+            <!-- Career Timeline -->
+            <div class="infographic-block">
+                <img src="08_Career_Timeline_infographic.jpg" alt="Visual Career Timeline" loading="lazy">
+            </div>
+            
+            <!-- Transaction Stats -->
+            <div class="infographic-block">
+                <img src="09_Transaction_Volume_Stats.jpg" alt="Transaction Volume Statistics" loading="lazy">
+            </div>
+
+             <!-- Lego Visual Metaphor -->
+             <div class="infographic-block">
+                <img src="10_Lego_Builder_Visual.jpg" alt="Building Value - Career Metaphor" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- EXPERIENCE SECTION -->
     <section class="card" id="experience">
       <div class="section-header">
         <h2 class="section-title">Experience</h2>
       </div>
       <div class="content-padding">
 
+        <!-- Ampol -->
         <div class="list-item">
           <div class="logo-box">
             <img src="images/ampol.png" alt="Ampol" onerror="this.style.display='none'; this.parentNode.innerText='AA'">
@@ -325,6 +385,12 @@
                 <li>Significantly contributed to inorganic growth options and long-term aspirations in support of Group Strategic Plan.</li>
                 <li>Led the evaluation of potential large-scale acquisitions (over A$1B) within the downstream energy sector.</li>
               </ul>
+              
+              <!-- Infographic: Ampol -->
+              <div class="infographic-block">
+                <img src="11_Ampol_Strategy.jpg" alt="Ampol Strategic Leadership and Achievements" loading="lazy">
+              </div>
+
               <a href="files/Ampol_Summary.pdf" target="_blank" class="doc-link">
                 <svg class="doc-icon" viewBox="0 0 24 24" width="16" height="16"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
                 Contribution Summary (PDF)
@@ -333,6 +399,7 @@
           </div>
         </div>
 
+        <!-- CCEP -->
         <div class="list-item">
           <div class="logo-box">
             <img src="images/ccep.jpg" alt="CCEP" onerror="this.style.display='none'; this.parentNode.innerText='CC'">
@@ -346,6 +413,12 @@
                 <li>Provided strategic counsel and executed on key regional Asia Pacific M&A and partnering opportunities.</li>
                 <li>Managed brand divestments valued at over A$300m, strategically aligning the portfolio with the Coca-Cola system.</li>
               </ul>
+
+              <!-- Infographic: Coca Cola -->
+              <div class="infographic-block">
+                <img src="13_CocaCola_Profile.jpg" alt="Coca-Cola Growth and Optimization Strategy" loading="lazy">
+              </div>
+
               <a href="files/CCEP_Summary.pdf" target="_blank" class="doc-link">
                 <svg class="doc-icon" viewBox="0 0 24 24" width="16" height="16"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
                 Contribution Summary (PDF)
@@ -354,6 +427,7 @@
           </div>
         </div>
 
+        <!-- Asciano -->
         <div class="list-item">
           <div class="logo-box">
             <img src="images/asciano.jpg" alt="Asciano" onerror="this.style.display='none'; this.parentNode.innerText='AS'">
@@ -367,6 +441,12 @@
                 <li>Led due diligence and separation workstreams for the A$12 billion consortium takeover by Qube/Brookfield.</li>
                 <li>Managed acquisitions and divestments totalling A$350 million to align the portfolio with strategic objectives.</li>
               </ul>
+
+              <!-- Infographic: Asciano -->
+              <div class="infographic-block">
+                <img src="12_Asciano_Profile.jpg" alt="Asciano Logistics Infrastructure Strategy" loading="lazy">
+              </div>
+
               <a href="files/Asciano_Summary.pdf" target="_blank" class="doc-link">
                 <svg class="doc-icon" viewBox="0 0 24 24" width="16" height="16"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
                 Contribution Summary (PDF)
@@ -375,6 +455,7 @@
           </div>
         </div>
 
+        <!-- Jacobs -->
         <div class="list-item">
           <div class="logo-box">
             <img src="images/jacobs.jpg" alt="Jacobs" onerror="this.style.display='none'; this.parentNode.innerText='JA'">
@@ -388,6 +469,12 @@
                 <li>Led the due diligence and integration processes for the A$1.3 billion merger with Jacobs Group.</li>
                 <li>Executed 9 M&A transactions (5 offshore, 4 domestic) totalling over A$130 million.</li>
               </ul>
+
+              <!-- Infographic: Jacobs/SKM -->
+              <div class="infographic-block">
+                <img src="06_SKM_Jacobs_Profile.jpg" alt="SKM & Jacobs Corporate Finance Transformation" loading="lazy">
+              </div>
+
               <a href="files/Jacobs_Summary.pdf" target="_blank" class="doc-link">
                 <svg class="doc-icon" viewBox="0 0 24 24" width="16" height="16"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
                 Contribution Summary (PDF)
@@ -396,6 +483,7 @@
           </div>
         </div>
 
+        <!-- ABN AMRO -->
         <div class="list-item">
           <div class="logo-box">
             <img src="images/abamro.jpg" alt="ABN AMRO" onerror="this.style.display='none'; this.parentNode.innerText='AB'">
@@ -406,7 +494,12 @@
             <div class="item-meta">Feb 2007 - Jan 2009 (2 years) | New Zealand & Australia</div>
             <div class="item-desc">
               Supported execution of major transactions including Carlyle's A$2.3bn acquisition of Coates Hire.
-              <br>
+              
+              <!-- Infographic: ABN AMRO -->
+              <div class="infographic-block">
+                <img src="04_ABN_AMRO_Profile.jpg" alt="ABN AMRO Investment Banking Profile" loading="lazy">
+              </div>
+
               <a href="files/ABN_Summary.pdf" target="_blank" class="doc-link">
                 <svg class="doc-icon" viewBox="0 0 24 24" width="16" height="16"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
                 Contribution Summary (PDF)
@@ -415,6 +508,7 @@
           </div>
         </div>
 
+        <!-- Fonterra -->
         <div class="list-item">
           <div class="logo-box">
             <img src="images/fonterra.jpg" alt="Fonterra" onerror="this.style.display='none'; this.parentNode.innerText='FN'">
@@ -425,7 +519,12 @@
             <div class="item-meta">Jan 2004 - Jan 2007 (3 years 1 month)</div>
             <div class="item-desc">
               Group Strategy role providing strategic problem solving and competitive/market analysis for global acquisitions.
-              <br>
+              
+              <!-- Infographic: Fonterra -->
+              <div class="infographic-block">
+                <img src="05_Fonterra_Profile.jpg" alt="Fonterra Global Strategy Profile" loading="lazy">
+              </div>
+
               <a href="files/Fonterra_Summary.pdf" target="_blank" class="doc-link">
                 <svg class="doc-icon" viewBox="0 0 24 24" width="16" height="16"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
                 Contribution Summary (PDF)
@@ -437,6 +536,7 @@
       </div>
     </section>
 
+    <!-- EDUCATION SECTION -->
     <section class="card" id="education">
       <div class="section-header">
         <h2 class="section-title">Education</h2>
@@ -451,6 +551,11 @@
             <h3 class="item-title">Macquarie Graduate School of Management</h3>
             <div class="item-subtitle">Master of Business Administration (M.B.A.)</div>
             
+            <!-- Infographic: MBA -->
+            <div class="infographic-block">
+                <img src="03_MGSM_MBA_Profile.jpg" alt="MGSM MBA Executive Profile" loading="lazy">
+            </div>
+
             <a href="files/MBA_Transcript.pdf" target="_blank" class="doc-link">
               <svg class="doc-icon" viewBox="0 0 24 24" width="16" height="16"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
               Academic Transcript (PDF)
@@ -466,6 +571,16 @@
             <h3 class="item-title">University of Otago</h3>
             <div class="item-subtitle">Masters of Commerce (MCom)</div>
             
+            <!-- Infographic: Otago MCom + Dual Degree Info -->
+            <div class="visual-summary-container">
+                <div class="infographic-block">
+                    <img src="01_MCom_Profile.jpg" alt="Master of Commerce Executive Profile" loading="lazy">
+                </div>
+                <div class="infographic-block">
+                    <img src="02_Dual_Degree_Profile.jpg" alt="Dual Degree Rigor & Strategic Foundation" loading="lazy">
+                </div>
+            </div>
+
             <a href="files/Otago_Transcript.pdf" target="_blank" class="doc-link">
               <svg class="doc-icon" viewBox="0 0 24 24" width="16" height="16"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
               Academic Transcript (PDF)
@@ -486,6 +601,7 @@
       </div>
     </section>
 
+    <!-- SKILLS SECTION -->
     <section class="card">
       <div class="section-header">
         <h2 class="section-title">Skills & Publications</h2>
@@ -510,6 +626,16 @@
           Research Publication: Strategic Alignment for High Growth (PDF)
         </a>
 
+      </div>
+    </section>
+
+    <!-- CONNECT SECTION (LinkedIn Badge) -->
+    <section class="card">
+      <div class="section-header">
+        <h2 class="section-title">Connect</h2>
+      </div>
+      <div class="content-padding" style="display: flex; justify-content: center;">
+        <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="andrew-mitchell-corpdev" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://au.linkedin.com/in/andrew-mitchell-corpdev?trk=profile-badge">Andrew Mitchell</a></div>
       </div>
     </section>
 
