@@ -91,7 +91,7 @@
       overflow: hidden;
     }
 
-    /* HERO SECTION with Banner & Profile Pic */
+    /* HERO SECTION with Banner */
     .profile-hero { padding-bottom: 24px; }
 
     .hero-banner {
@@ -103,30 +103,9 @@
       background-position: center;
     }
 
-    .profile-pic-wrapper {
-      position: absolute;
-      top: 130px;
-      left: 24px;
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      border: 4px solid white;
-      background-color: white;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 48px;
-      color: #ccc;
-      background: #f0f0f0;
-      z-index: 10;
-    }
-    /* NOTE: We removed the img tag pointing to profile.jpg here because 
-       user requested profile.jpg to be in Featured section. 
-       This now defaults to showing initials "AM". */
-    
     .hero-content {
-      margin-top: 100px;
+      /* Adjusted spacing since profile pic is gone */
+      margin-top: 24px; 
       padding: 0 24px;
     }
 
@@ -248,10 +227,6 @@
 
     <header class="card profile-hero">
       <div class="hero-banner"></div>
-      
-      <div class="profile-pic-wrapper">
-        AM
-      </div>
 
       <div class="hero-content">
         <h1 class="hero-name">Andrew Mitchell</h1>
