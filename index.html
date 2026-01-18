@@ -85,7 +85,7 @@
       background: var(--card-bg);
       border-radius: 8px;
       box-shadow: 0 0 0 1px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.05);
-      padding: 0; /* Padding handled by inner sections for banner */
+      padding: 0; 
       margin-bottom: 1.5rem;
       position: relative;
       overflow: hidden;
@@ -98,8 +98,8 @@
       height: 200px;
       width: 100%;
       background-color: #a0b4b7;
-      /* Image path assumes your folder is named 'images' */
-      background-image: url('images/heading.jpg');
+      /* Updated filename: Heading.jpg */
+      background-image: url('images/Heading.jpg');
       background-size: cover;
       background-position: center;
     }
@@ -199,7 +199,7 @@
     .featured-title { font-size: 14px; font-weight: 600; color: var(--text-main); margin: 0 0 4px 0; }
     .featured-desc { font-size: 12px; color: var(--text-sub); margin: 0; }
 
-    /* LIST ITEMS (Experience/Education) */
+    /* LIST ITEMS */
     .list-item { display: flex; gap: 12px; margin-bottom: 24px; }
     .list-item:last-child { margin-bottom: 0; }
 
@@ -207,13 +207,11 @@
       width: 48px;
       height: 48px;
       flex-shrink: 0;
-      background-color: #eee; /* Fallback color */
+      background-color: #fff;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: bold;
-      color: #666;
-      font-size: 12px;
+      border: 1px solid #f3f2ef; /* Slight border for white logos */
     }
     .logo-box img { width: 100%; height: 100%; object-fit: contain; }
 
@@ -285,7 +283,7 @@
       <div class="featured-grid">
         <a href="https://andrew-mitchell-executive-portfolio-704555970617.us-west1.run.app/" target="_blank" class="featured-card">
           <div class="featured-img-area">
-            <img src="images/1.jpg" alt="Portfolio Dashboard" onerror="this.parentNode.innerHTML='Portfolio View'">
+            <img src="images/ampol.png" alt="Portfolio Dashboard" style="object-fit:contain; padding:20px;" onerror="this.parentNode.innerHTML='Portfolio View'">
           </div>
           <div class="featured-text-area">
             <div class="featured-title">Executive Portfolio (Interactive)</div>
@@ -294,7 +292,7 @@
         </a>
         <a href="https://andrew-mitchell-executive-portfolio-704555970617.us-west1.run.app/" target="_blank" class="featured-card">
           <div class="featured-img-area">
-            <img src="images/2.jpg" alt="Deal Log" onerror="this.parentNode.innerHTML='Deal Log'">
+            <img src="images/ccep.jpg" alt="Deal Log" style="object-fit:contain; padding:20px;" onerror="this.parentNode.innerHTML='Deal Log'">
           </div>
           <div class="featured-text-area">
             <div class="featured-title">Transaction History</div>
@@ -341,7 +339,7 @@
 
         <div class="list-item">
           <div class="logo-box">
-            <img src="images/ccep.png" alt="CCEP" onerror="this.style.display='none'; this.parentNode.innerText='CC'">
+            <img src="images/ccep.jpg" alt="CCEP" onerror="this.style.display='none'; this.parentNode.innerText='CC'">
           </div>
           <div class="item-content">
             <h3 class="item-title">Director, Mergers and Acquisitions</h3>
@@ -359,7 +357,7 @@
 
         <div class="list-item">
           <div class="logo-box">
-            <img src="images/asciano.png" alt="Asciano" onerror="this.style.display='none'; this.parentNode.innerText='AS'">
+            <img src="images/asciano.jpg" alt="Asciano" onerror="this.style.display='none'; this.parentNode.innerText='AS'">
           </div>
           <div class="item-content">
             <h3 class="item-title">Manager, Strategy & Corporate Development</h3>
@@ -376,7 +374,7 @@
 
         <div class="list-item">
           <div class="logo-box">
-            <img src="images/jacobs.png" alt="Jacobs" onerror="this.style.display='none'; this.parentNode.innerText='JA'">
+            <img src="images/jacobs.jpg" alt="Jacobs" onerror="this.style.display='none'; this.parentNode.innerText='JA'">
           </div>
           <div class="item-content">
             <h3 class="item-title">Analyst, Corporate Finance</h3>
@@ -393,7 +391,7 @@
 
         <div class="list-item">
           <div class="logo-box">
-            <img src="images/abnamro.png" alt="ABN AMRO" onerror="this.style.display='none'; this.parentNode.innerText='AB'">
+            <img src="images/abamro.jpg" alt="ABN AMRO" onerror="this.style.display='none'; this.parentNode.innerText='AB'">
           </div>
           <div class="item-content">
             <h3 class="item-title">Analyst, Investment Banking</h3>
@@ -407,7 +405,7 @@
 
         <div class="list-item">
           <div class="logo-box">
-            <img src="images/fonterra.png" alt="Fonterra" onerror="this.style.display='none'; this.parentNode.innerText='FN'">
+            <img src="images/fonterra.jpg" alt="Fonterra" onerror="this.style.display='none'; this.parentNode.innerText='FN'">
           </div>
           <div class="item-content">
             <h3 class="item-title">Strategy Analyst</h3>
@@ -430,7 +428,7 @@
         
         <div class="list-item">
           <div class="logo-box">
-             <img src="images/macquarie.png" alt="MGSM" onerror="this.style.display='none'; this.parentNode.innerText='MG'">
+             <img src="images/MGSM.jpg" alt="MGSM" onerror="this.style.display='none'; this.parentNode.innerText='MG'">
           </div>
           <div class="item-content">
             <h3 class="item-title">Macquarie Graduate School of Management</h3>
@@ -440,7 +438,7 @@
         
         <div class="list-item">
           <div class="logo-box">
-             <img src="images/otago.png" alt="Otago" onerror="this.style.display='none'; this.parentNode.innerText='UO'">
+             <img src="images/otago.jpg" alt="Otago" onerror="this.style.display='none'; this.parentNode.innerText='UO'">
           </div>
           <div class="item-content">
             <h3 class="item-title">University of Otago</h3>
@@ -450,7 +448,7 @@
         
         <div class="list-item">
           <div class="logo-box">
-             <img src="images/richmond.png" alt="Richmond" onerror="this.style.display='none'; this.parentNode.innerText='UR'">
+             <img src="images/Richmond.jpg" alt="Richmond" onerror="this.style.display='none'; this.parentNode.innerText='UR'">
           </div>
           <div class="item-content">
             <h3 class="item-title">University of Richmond</h3>
