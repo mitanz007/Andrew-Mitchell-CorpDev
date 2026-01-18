@@ -1,6 +1,15 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XRJRV4241"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-4XRJRV4241');
+  </script>
+
   <meta name="google-site-verification" content="PkhtXZtzenpVW_MKNT1-oPVaG5hw4430p7pKzx8-E50" />
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -12,18 +21,20 @@
   <meta property="og:description" content="Strategy and Corporate Development Executive. $32bn+ Deal Experience." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://mitanz007.github.io/Andrew-Mitchell-CorpDev/" />
-  <meta property="og:image" content="https://mitanz007.github.io/Andrew-Mitchell-CorpDev/profile-image.jpg" /> <meta name="twitter:card" content="summary" />
+  <meta property="og:image" content="https://mitanz007.github.io/Andrew-Mitchell-CorpDev/images/profile.jpg" />
+  
+  <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Andrew Mitchell — Corporate Development" />
-  <meta name="twitter:description" content="Connect on LinkedIn: http://linkedin.com/in/andrew-mitchell-corpdev" />
+  <meta name="twitter:description" content="Connect on LinkedIn: https://www.linkedin.com/in/andrew-mitchell-4959415" />
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Andrew Mitchell",
-    "url": "http://linkedin.com/in/andrew-mitchell-corpdev",
+    "url": "https://www.linkedin.com/in/andrew-mitchell-4959415",
     "sameAs": [
-      "http://linkedin.com/in/andrew-mitchell-corpdev",
+      "https://www.linkedin.com/in/andrew-mitchell-4959415",
       "https://github.com/mitanz007/Andrew-Mitchell-CorpDev",
       "https://andrew-mitchell-executive-portfolio-704555970617.us-west1.run.app/"
     ],
@@ -42,12 +53,11 @@
 
   <style>
     :root {
-      --primary-color: #0a66c2; /* LinkedIn Blue */
-      --primary-hover: #004182;
-      --text-main: #191919;
-      --text-secondary: #666666;
+      --primary-blue: #0a66c2;
       --bg-color: #f3f2ef;
       --card-bg: #ffffff;
+      --text-main: #191919;
+      --text-sub: #666666;
       --border-color: #e0e0e0;
       --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
@@ -61,32 +71,10 @@
       line-height: 1.5;
     }
 
-    a { color: var(--primary-color); text-decoration: none; font-weight: 500; }
+    a { color: var(--primary-blue); text-decoration: none; font-weight: 500; }
     a:hover { text-decoration: underline; }
 
-    /* Sticky Nav */
-    .navbar {
-      position: sticky;
-      top: 0;
-      background: #fff;
-      border-bottom: 1px solid var(--border-color);
-      padding: 0.75rem 0;
-      z-index: 1000;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    }
-    .nav-container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 0 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .nav-brand { font-weight: 700; color: var(--text-main); font-size: 1.1rem; }
-    .nav-links a { margin-left: 1.5rem; color: var(--text-secondary); font-size: 0.9rem; }
-    .nav-links a:hover { color: var(--primary-color); }
-
-    .container { 
+    .main-container { 
       max-width: 800px; 
       margin: 2rem auto; 
       padding: 0 1rem;
@@ -97,423 +85,401 @@
       background: var(--card-bg);
       border-radius: 8px;
       box-shadow: 0 0 0 1px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.05);
-      padding: 2rem;
+      padding: 0; /* Padding handled by inner sections for banner */
       margin-bottom: 1.5rem;
       position: relative;
+      overflow: hidden;
     }
 
-    /* Header Section */
-    .profile-header h1 {
-      margin: 0 0 0.5rem 0;
-      font-size: 2rem;
-      color: rgba(0, 0, 0, 0.9);
+    /* HERO SECTION with Banner & Profile Pic */
+    .profile-hero { padding-bottom: 24px; }
+
+    .hero-banner {
+      height: 200px;
+      width: 100%;
+      background-color: #a0b4b7;
+      /* Image path assumes your folder is named 'images' */
+      background-image: url('images/heading.jpg');
+      background-size: cover;
+      background-position: center;
     }
-    .headline {
-      font-size: 1.1rem;
-      color: var(--text-main);
-      margin-bottom: 0.5rem;
-      font-weight: 400;
-    }
-    .location {
-      color: var(--text-secondary);
-      font-size: 0.9rem;
-      margin-bottom: 1rem;
-    }
-    .contact-actions {
+
+    .profile-pic-wrapper {
+      position: absolute;
+      top: 130px;
+      left: 24px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 4px solid white;
+      background-color: white;
+      overflow: hidden;
       display: flex;
-      gap: 0.75rem;
-      margin-top: 1rem;
-      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+      color: #ccc;
+      background: #f0f0f0;
     }
+    .profile-pic-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .profile-pic-wrapper img[src=""] { display: none; }
+
+    .hero-content {
+      margin-top: 100px;
+      padding: 0 24px;
+    }
+
+    .hero-name { margin: 0; font-size: 24px; font-weight: 600; color: rgba(0,0,0,0.9); }
+    .hero-headline { margin: 4px 0 8px 0; font-size: 16px; color: var(--text-main); font-weight: 400; }
+    .hero-location { margin-bottom: 16px; font-size: 14px; color: var(--text-sub); }
+
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
     .btn {
-      display: inline-block;
-      padding: 0.4rem 1rem;
-      border-radius: 1.5rem;
+      padding: 6px 16px;
+      border-radius: 24px;
       font-weight: 600;
-      text-align: center;
-      transition: all 0.2s;
+      font-size: 16px;
+      cursor: pointer;
       border: 1px solid transparent;
-      font-size: 0.95rem;
-      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
     }
-    .btn:hover { text-decoration: none; }
-    
-    .btn-primary {
-      background-color: var(--primary-color);
-      color: white;
-    }
-    .btn-primary:hover { background-color: var(--primary-hover); }
+    .btn-primary { background-color: var(--primary-blue); color: white; }
+    .btn-primary:hover { background-color: #004182; text-decoration: none; }
+    .btn-secondary { background-color: transparent; border-color: var(--primary-blue); color: var(--primary-blue); }
+    .btn-secondary:hover { background-color: rgba(10, 102, 194, 0.1); border-width: 2px; padding: 5px 15px; text-decoration: none; }
 
-    .btn-outline {
-      background-color: transparent;
-      border-color: var(--primary-color);
-      color: var(--primary-color);
-    }
-    .btn-outline:hover {
-      background-color: rgba(10, 102, 194, 0.1);
-      border-width: 2px;
-      padding: calc(0.4rem - 1px) calc(1rem - 1px); /* Prevent layout shift */
-    }
-
-    /* Section Headings */
-    .section-head {
+    /* SECTIONS */
+    .section-header {
+      padding: 24px 24px 0 24px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 1.5rem;
+      margin-bottom: 16px;
+    }
+    .section-title { font-size: 20px; font-weight: 600; margin: 0; }
+    .content-padding { padding: 0 24px 24px 24px; }
+
+    /* FEATURED GRID */
+    .featured-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      padding: 0 24px 24px 24px;
+    }
+    .featured-card {
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      transition: box-shadow 0.2s;
+    }
+    .featured-card:hover { box-shadow: 0 0 0 1px rgba(0,0,0,0.15), 0 4px 6px rgba(0,0,0,0.1); text-decoration: none; }
+    
+    .featured-img-area {
+      height: 160px;
+      background-color: #eef3f8;
+      overflow: hidden;
       border-bottom: 1px solid var(--border-color);
-      padding-bottom: 0.75rem;
-    }
-    h2 {
-      font-size: 1.35rem;
-      margin: 0;
-    }
-    .linkedin-link {
-      font-size: 0.85rem;
-      color: var(--text-secondary);
+      border-radius: 8px 8px 0 0;
       display: flex;
       align-items: center;
+      justify-content: center;
+      color: var(--text-sub);
     }
-    .linkedin-link svg {
-      width: 14px;
-      height: 14px;
-      margin-left: 4px;
-      fill: currentColor;
-    }
+    .featured-img-area img { width: 100%; height: 100%; object-fit: cover; }
+    .featured-text-area { padding: 12px 16px; }
+    .featured-title { font-size: 14px; font-weight: 600; color: var(--text-main); margin: 0 0 4px 0; }
+    .featured-desc { font-size: 12px; color: var(--text-sub); margin: 0; }
 
-    /* Featured Section */
-    .featured-box {
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      padding: 1rem;
-      background: #f9fafb;
+    /* LIST ITEMS (Experience/Education) */
+    .list-item { display: flex; gap: 12px; margin-bottom: 24px; }
+    .list-item:last-child { margin-bottom: 0; }
+
+    .logo-box {
+      width: 48px;
+      height: 48px;
+      flex-shrink: 0;
+      background-color: #eee; /* Fallback color */
       display: flex;
       align-items: center;
-      gap: 1rem;
+      justify-content: center;
+      font-weight: bold;
+      color: #666;
+      font-size: 12px;
     }
-    .featured-icon {
-      font-size: 2rem;
-    }
-    .featured-content h3 { margin: 0 0 0.25rem 0; font-size: 1rem; }
-    .featured-content p { margin: 0; font-size: 0.9rem; color: var(--text-secondary); }
+    .logo-box img { width: 100%; height: 100%; object-fit: contain; }
 
-    /* Experience & Education */
-    .timeline-item {
-      margin-bottom: 2rem;
-      position: relative;
-      padding-left: 1rem;
-      border-left: 2px solid transparent;
-    }
-    .timeline-item:hover {
-      border-left-color: var(--primary-color);
-    }
-    .timeline-item:last-child { margin-bottom: 0; }
-    
-    .role-title {
+    .item-content { flex-grow: 1; border-bottom: 1px solid var(--border-color); padding-bottom: 24px; }
+    .list-item:last-child .item-content { border-bottom: none; padding-bottom: 0; }
+
+    .item-title { font-size: 16px; font-weight: 600; color: var(--text-main); margin: 0; }
+    .item-subtitle { font-size: 14px; color: var(--text-main); margin: 2px 0; }
+    .item-meta { font-size: 14px; color: var(--text-sub); margin: 2px 0 8px 0; }
+    .item-desc { font-size: 14px; color: var(--text-main); line-height: 1.5; margin-top: 8px; }
+    .item-desc ul { padding-left: 18px; margin: 8px 0; }
+    .item-desc li { margin-bottom: 4px; }
+
+    /* SKILLS */
+    .skills-container { padding: 0 24px 24px 24px; display: flex; flex-wrap: wrap; gap: 8px; }
+    .skill-pill {
+      border: 1px solid var(--text-sub);
+      border-radius: 16px;
+      padding: 6px 16px;
       font-weight: 600;
-      font-size: 1.1rem;
-      margin: 0;
+      font-size: 14px;
       color: var(--text-main);
-    }
-    .company-name {
-      font-weight: 400;
-      color: var(--text-main);
-      margin: 0;
-      font-size: 1rem;
-    }
-    .date-range {
-      color: var(--text-secondary);
-      font-size: 0.9rem;
-      margin: 0.25rem 0 0.5rem 0;
-      display: block;
-    }
-    .company-desc {
-      font-size: 0.95rem;
-      margin-bottom: 0.75rem;
-      color: var(--text-secondary);
-      line-height: 1.4;
-    }
-    ul {
-      margin: 0.5rem 0;
-      padding-left: 1.2rem;
-      color: var(--text-main);
-      font-size: 0.95rem;
-    }
-    li { margin-bottom: 0.5rem; }
-
-    /* Skills & Awards */
-    .skills-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-    }
-    .skill-tag {
-      background: white;
-      color: var(--text-secondary);
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      border: 1px solid var(--border-color);
-      display: flex;
-      align-items: center;
-    }
-    .skill-tag::before {
-      content: "◆";
-      font-size: 0.6rem;
-      color: var(--primary-color);
-      margin-right: 0.5rem;
-    }
-    
-    .awards-list li, .publications-list li {
-      margin-bottom: 0.75rem;
+      display: inline-block;
     }
 
-    /* Footer */
-    footer {
-      text-align: center;
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-      padding: 2rem 0;
-      border-top: 1px solid var(--border-color);
-      margin-top: 2rem;
-    }
+    footer { text-align: center; color: var(--text-sub); font-size: 12px; padding: 24px; border-top: 1px solid var(--border-color); margin-top: 2rem; }
     
-    /* Responsive */
     @media (max-width: 600px) {
-      .contact-actions { flex-direction: column; width: 100%; }
-      .btn { width: 100%; box-sizing: border-box; }
-      .nav-links { display: none; } /* Simplify nav for mobile */
-      .nav-brand { text-align: center; width: 100%; }
+      .featured-grid { grid-template-columns: 1fr; }
+      .hero-actions { flex-direction: column; width: 100%; }
+      .btn { width: 100%; }
     }
   </style>
 </head>
 <body>
 
-  <nav class="navbar">
-    <div class="nav-container">
-      <div class="nav-brand">Andrew Mitchell</div>
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="https://andrew-mitchell-executive-portfolio-704555970617.us-west1.run.app/" target="_blank">Portfolio</a>
-      </div>
-    </div>
-  </nav>
+  <div class="main-container">
 
-  <div class="container">
-    
-    <header class="card profile-header">
-      <h1>Andrew Mitchell</h1>
-      <div class="headline">Head of Corporate Development | Strategy & M&A | Global Energy, Infrastructure & FMCG | $32bn+ Deal Experience | MBA, MCom</div>
-      <div class="location">Sydney, New South Wales, Australia</div>
+    <header class="card profile-hero">
+      <div class="hero-banner"></div>
       
-      <div class="contact-actions">
-        <a href="https://andrew-mitchell-executive-portfolio-704555970617.us-west1.run.app/" target="_blank" class="btn btn-primary">
-          View Executive Portfolio
-        </a>
-        <a href="http://linkedin.com/in/andrew-mitchell-corpdev" target="_blank" rel="noopener" class="btn btn-outline">
-          Connect on LinkedIn
-        </a>
-        <a href="mailto:mitchell.ae000@gmail.com" class="btn btn-outline" style="border-color: var(--text-secondary); color: var(--text-secondary);">
-          Email Me
-        </a>
+      <div class="profile-pic-wrapper">
+        <img src="images/profile.jpg" alt="Andrew Mitchell" onerror="this.style.display='none'; this.parentNode.innerText='AM'">
+      </div>
+
+      <div class="hero-content">
+        <h1 class="hero-name">Andrew Mitchell</h1>
+        <div class="hero-headline">Head of Corporate Development | Strategy & M&A | Global Energy, Infrastructure & FMCG | $32bn+ Deal Experience | MBA, MCom</div>
+        <div class="hero-location">Sydney, New South Wales, Australia</div>
+        
+        <div class="hero-actions">
+          <a href="https://andrew-mitchell-executive-portfolio-704555970617.us-west1.run.app/" target="_blank" class="btn btn-primary">
+            View Executive Portfolio
+          </a>
+          <a href="https://www.linkedin.com/in/andrew-mitchell-4959415" target="_blank" class="btn btn-secondary">
+            View LinkedIn Profile
+          </a>
+          <a href="mailto:mitchell.ae000@gmail.com" class="btn btn-secondary">
+            Email Me
+          </a>
+        </div>
       </div>
     </header>
 
-    <section class="card" id="featured">
-      <div class="section-head">
-        <h2>Featured</h2>
+    <section class="card">
+      <div class="section-header">
+        <h2 class="section-title">Featured</h2>
       </div>
-      <a href="https://andrew-mitchell-executive-portfolio-704555970617.us-west1.run.app/" target="_blank" style="text-decoration:none;">
-        <div class="featured-box">
-          <div class="featured-icon">📊</div>
-          <div class="featured-content">
-            <h3 style="color:var(--primary-color);">Executive Portfolio (Interactive)</h3>
-            <p>Explore my detailed transaction history, strategic frameworks, and case studies hosted on Google Cloud.</p>
+      <div class="featured-grid">
+        <a href="https://andrew-mitchell-executive-portfolio-704555970617.us-west1.run.app/" target="_blank" class="featured-card">
+          <div class="featured-img-area">
+            <img src="images/1.jpg" alt="Portfolio Dashboard" onerror="this.parentNode.innerHTML='Portfolio View'">
           </div>
-        </div>
-      </a>
+          <div class="featured-text-area">
+            <div class="featured-title">Executive Portfolio (Interactive)</div>
+            <div class="featured-desc">Explore transaction history and strategic frameworks hosted on Google Cloud.</div>
+          </div>
+        </a>
+        <a href="https://andrew-mitchell-executive-portfolio-704555970617.us-west1.run.app/" target="_blank" class="featured-card">
+          <div class="featured-img-area">
+            <img src="images/2.jpg" alt="Deal Log" onerror="this.parentNode.innerHTML='Deal Log'">
+          </div>
+          <div class="featured-text-area">
+            <div class="featured-title">Transaction History</div>
+            <div class="featured-desc">Detailed log of $32bn+ in closed deal value across energy and infrastructure.</div>
+          </div>
+        </a>
+      </div>
     </section>
 
-    <section class="card summary" id="about">
-      <div class="section-head">
-        <h2>About</h2>
+    <section class="card">
+      <div class="section-header">
+        <h2 class="section-title">About</h2>
       </div>
-      <p>I am a Strategy and Corporate Development Executive who cuts through the noise to get deals done via a hands-on approach. With a track record of $32bn+ in closed transaction value, I help organisations navigate complex mergers, acquisitions, and divestments working alongside business teams and functional advisors.</p>
-      
-      <p>My experience spans the full deal lifecycle - from origination and financial modelling to due diligence and integration - across highly regulated and capital-intensive sectors:</p>
-      <ul>
-        <li><strong>Energy & Fuels (Ampol ASX:ALD):</strong> Leading transition strategies and supply chain optimisation.</li>
-        <li><strong>Global Infrastructure (Jacobs NYSE:J):</strong> Managing international M&A and growth strategies across engineering and technical services markets.</li>
-        <li><strong>FMCG/Retail (Coca-Cola NYSE/LSE:CCEP):</strong> Driving competitive advantage in fast-moving consumer environments.</li>
-      </ul>
-      
-      <p>I have extensive cross-border project experience working across multi-zone teams, bringing a global perspective to local challenges. I believe the best strategies are the practical ones—those that can be executed on time, on budget, and with clear value for shareholders.</p>
+      <div class="content-padding">
+        <p style="margin-top:0;">I am a Strategy and Corporate Development Executive who cuts through the noise to get deals done via a hands-on approach. With a track record of $32bn+ in closed transaction value, I help organisations navigate complex mergers, acquisitions, and divestments working alongside business teams and functional advisors.</p>
+        <p>My experience spans the full deal lifecycle across highly regulated sectors including Energy & Fuels (Ampol), Global Infrastructure (Jacobs), and FMCG (Coca-Cola). I believe the best strategies are the practical ones—those that can be executed on time, on budget, and with clear value for shareholders.</p>
+      </div>
     </section>
 
     <section class="card" id="experience">
-      <div class="section-head">
-        <h2>Experience</h2>
-        <a href="https://www.linkedin.com/in/andrew-mitchell-corpdev/details/experience/" target="_blank" class="linkedin-link">
-          View on LinkedIn 
-          <svg viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5c-1.11 0-2 .89-2 2v14c0 1.11.89 2 2 2h14c1.11 0 2-.89 2-2v-7h-2v7z"/></svg>
-        </a>
+      <div class="section-header">
+        <h2 class="section-title">Experience</h2>
       </div>
+      <div class="content-padding">
 
-      <div class="timeline-item">
-        <h3 class="role-title">Head of Corporate Development</h3>
-        <h4 class="company-name">Ampol Australia</h4>
-        <span class="date-range">January 2023 - Present (3 years 1 month) | Sydney, Australia</span>
-        <div class="company-desc">
-          Ampol is Australia's largest transport energy provider (ASX50) generating $35 billion revenue with over 9,000 employees.
+        <div class="list-item">
+          <div class="logo-box">
+            <img src="images/ampol.png" alt="Ampol" onerror="this.style.display='none'; this.parentNode.innerText='AA'">
+          </div>
+          <div class="item-content">
+            <h3 class="item-title">Head of Corporate Development</h3>
+            <div class="item-subtitle">Ampol Australia</div>
+            <div class="item-meta">January 2023 - Present (3 years 1 month) | Sydney, Australia</div>
+            <div class="item-desc">
+              Ampol is Australia's largest transport energy provider (ASX50) generating $35 billion revenue.
+              <ul>
+                <li>Significantly contributed to inorganic growth options and long-term aspirations in support of Group Strategic Plan.</li>
+                <li>Led the evaluation of potential large-scale acquisitions (over A$1B) within the downstream energy sector.</li>
+                <li>Oversaw business unit transaction governance and direction, including minority investments, growth options, and divestments.</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <ul>
-          <li>Significantly contributed to inorganic growth options and long-term aspirations in support of Group Strategic Plan.</li>
-          <li>Developed and implemented a robust M&A evaluation framework, enhancing the company's ability to assess and pursue strategic opportunities.</li>
-          <li>Provided strategic counsel on international expansion options, driving decisions on portfolio management and capital efficiency.</li>
-          <li>Led the evaluation of potential large-scale acquisitions (over A$1B) within the downstream energy sector.</li>
-          <li>Oversaw business unit transaction governance and direction, including minority investments, growth options, and divestments.</li>
-        </ul>
-      </div>
 
-      <div class="timeline-item">
-        <h3 class="role-title">Director, Mergers and Acquisitions</h3>
-        <h4 class="company-name">Coca-Cola Europacific Partners</h4>
-        <span class="date-range">January 2017 - January 2023 (6 years 1 month) | Sydney, Australia</span>
-        <div class="company-desc">
-          Coca-Cola Amatil (acquired by CCEP for $9.8bn) was the Asia-Pacific's largest bottler, now integrated into Coca-Cola Europacific Partners (LSE/NASDAQ).
+        <div class="list-item">
+          <div class="logo-box">
+            <img src="images/ccep.png" alt="CCEP" onerror="this.style.display='none'; this.parentNode.innerText='CC'">
+          </div>
+          <div class="item-content">
+            <h3 class="item-title">Director, Mergers and Acquisitions</h3>
+            <div class="item-subtitle">Coca-Cola Europacific Partners</div>
+            <div class="item-meta">January 2017 - January 2023 (6 years 1 month) | Sydney, Australia</div>
+            <div class="item-desc">
+              <ul>
+                <li>Provided strategic counsel and executed on key regional Asia Pacific M&A and partnering opportunities.</li>
+                <li>Managed brand divestments valued at over A$300m, strategically aligning the portfolio with the Coca-Cola system.</li>
+                <li>Executed beer portfolio and JV divestment, further aligning the portfolio with a non-alcoholic ready-to-drink (NARTD) focus.</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <ul>
-          <li>Provided strategic counsel and executed on key regional Asia Pacific M&A and partnering opportunities.</li>
-          <li>Review and recommendations to support the development of Southeast Asia strategic growth options.</li>
-          <li>Collaborated with the global head of M&A to shape, track, and report to the CCEP board on acquisition strategy.</li>
-          <li>Brand divestments collectively valued at over A$300 million, strategically aligning the portfolio with the Coca-Cola system.</li>
-          <li>EUR 280 million acquisition in Indonesia, structuring the deal to mitigate currency risk and secure favourable provisions.</li>
-          <li>Executed beer portfolio and JV divestment, further aligning the portfolio with a non-alcoholic ready-to-drink (NARTD) focus.</li>
-        </ul>
-      </div>
 
-      <div class="timeline-item">
-        <h3 class="role-title">Manager, Strategy & Corporate Development</h3>
-        <h4 class="company-name">Asciano</h4>
-        <span class="date-range">2014 - December 2016 (2 years) | Sydney, Australia</span>
-        <div class="company-desc">
-          Asciano Group (demerged 2016) was Australia's largest transport infrastructure owner (ASX50).
+        <div class="list-item">
+          <div class="logo-box">
+            <img src="images/asciano.png" alt="Asciano" onerror="this.style.display='none'; this.parentNode.innerText='AS'">
+          </div>
+          <div class="item-content">
+            <h3 class="item-title">Manager, Strategy & Corporate Development</h3>
+            <div class="item-subtitle">Asciano</div>
+            <div class="item-meta">2014 - December 2016 (2 years) | Sydney, Australia</div>
+            <div class="item-desc">
+              <ul>
+                <li>Led due diligence and separation workstreams for the A$12 billion consortium takeover by Qube/Brookfield.</li>
+                <li>Managed acquisitions and divestments totalling A$350 million to align the portfolio with strategic objectives.</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <ul>
-          <li>Played a key role in shaping the 2015 and 2016 group strategy plans.</li>
-          <li>Led due diligence and separation workstreams for the A$12 billion consortium takeover by Qube/Brookfield.</li>
-          <li>Managed acquisitions and divestments totalling A$350 million to align the portfolio with strategic objectives.</li>
-          <li>Developed the business case for a US$2 billion+ transformational US ports merger attempt.</li>
-        </ul>
-      </div>
 
-      <div class="timeline-item">
-        <h3 class="role-title">Analyst, Corporate Finance</h3>
-        <h4 class="company-name">Jacobs</h4>
-        <span class="date-range">December 2009 - December 2014 (5 years 1 month) | Sydney, Australia</span>
-        <div class="company-desc">
-          Sinclair Knight Merz (acquired by Jacobs for $1.3bn) was a premier strategic consulting and engineering firm integrated into Jacobs Engineering Group (NYSE:J).
+        <div class="list-item">
+          <div class="logo-box">
+            <img src="images/jacobs.png" alt="Jacobs" onerror="this.style.display='none'; this.parentNode.innerText='JA'">
+          </div>
+          <div class="item-content">
+            <h3 class="item-title">Analyst, Corporate Finance</h3>
+            <div class="item-subtitle">Jacobs</div>
+            <div class="item-meta">December 2009 - December 2014 (5 years 1 month) | Sydney, Australia</div>
+            <div class="item-desc">
+              <ul>
+                <li>Led the due diligence and integration processes for the A$1.3 billion merger with Jacobs Group.</li>
+                <li>Executed 9 M&A transactions (5 offshore, 4 domestic) totalling over A$130 million.</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <ul>
-          <li>Led the due diligence and integration processes for the A$1.3 billion merger with Jacobs Group.</li>
-          <li>Oversaw the regional bid pricing model, including its roll-up and customisation to support Southeast Asia expansion.</li>
-          <li>Executed 9 M&A transactions (5 offshore, 4 domestic) totalling over A$130 million, achieving a 14.3% ROCE.</li>
-          <li>Owned the corporate valuation and capital structure model, providing key input into strategic planning.</li>
-        </ul>
-      </div>
 
-      <div class="timeline-item">
-        <h3 class="role-title">Analyst, Investment Banking</h3>
-        <h4 class="company-name">ABN AMRO Bank N.V.</h4>
-        <span class="date-range">February 2007 - January 2009 (2 years) | New Zealand & Australia</span>
-        <ul>
-          <li>Supported the execution of major transactions, including Carlyle's A$2.3bn acquisition of Coates Hire and CCMP/OTP's NZ$2.2bn acquisition of Yellow Pages Group NZ.</li>
-          <li>Gained experience across the TMT, energy, and industrial sectors.</li>
-        </ul>
-      </div>
+        <div class="list-item">
+          <div class="logo-box">
+            <img src="images/abnamro.png" alt="ABN AMRO" onerror="this.style.display='none'; this.parentNode.innerText='AB'">
+          </div>
+          <div class="item-content">
+            <h3 class="item-title">Analyst, Investment Banking</h3>
+            <div class="item-subtitle">ABN AMRO Bank N.V.</div>
+            <div class="item-meta">Feb 2007 - Jan 2009 (2 years) | New Zealand & Australia</div>
+            <div class="item-desc">
+              Supported execution of major transactions including Carlyle's A$2.3bn acquisition of Coates Hire.
+            </div>
+          </div>
+        </div>
 
-      <div class="timeline-item">
-        <h3 class="role-title">Strategy Analyst</h3>
-        <h4 class="company-name">Fonterra</h4>
-        <span class="date-range">January 2004 - January 2007 (3 years 1 month)</span>
-        <ul>
-          <li>Group Strategy role for the global FMCG dairy firm, providing strategic problem solving and competitive/market analysis for global acquisitions.</li>
-        </ul>
-      </div>
+        <div class="list-item">
+          <div class="logo-box">
+            <img src="images/fonterra.png" alt="Fonterra" onerror="this.style.display='none'; this.parentNode.innerText='FN'">
+          </div>
+          <div class="item-content">
+            <h3 class="item-title">Strategy Analyst</h3>
+            <div class="item-subtitle">Fonterra</div>
+            <div class="item-meta">Jan 2004 - Jan 2007 (3 years 1 month)</div>
+            <div class="item-desc">
+              Group Strategy role providing strategic problem solving and competitive/market analysis for global acquisitions.
+            </div>
+          </div>
+        </div>
 
+      </div>
     </section>
 
     <section class="card" id="education">
-      <div class="section-head">
-        <h2>Education</h2>
-        <a href="https://www.linkedin.com/in/andrew-mitchell-corpdev/details/education/" target="_blank" class="linkedin-link">
-          View on LinkedIn
-          <svg viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5c-1.11 0-2 .89-2 2v14c0 1.11.89 2 2 2h14c1.11 0 2-.89 2-2v-7h-2v7z"/></svg>
-        </a>
+      <div class="section-header">
+        <h2 class="section-title">Education</h2>
       </div>
-      <div class="timeline-item">
-        <h3 class="role-title">Macquarie Graduate School of Management</h3>
-        <div class="company-name">Master of Business Administration (M.B.A.)</div>
-      </div>
-      <div class="timeline-item">
-        <h3 class="role-title">University of Otago</h3>
-        <div class="company-name">Masters of Commerce (MCom)</div>
-      </div>
-      <div class="timeline-item">
-        <h3 class="role-title">University of Richmond - Robins School of Business</h3>
-        <div class="company-name">University Exchange, International Business</div>
-      </div>
-      <div class="timeline-item">
-        <h3 class="role-title">University of Otago</h3>
-        <div class="company-name">Bachelor of Commerce with First Class Honours (BCom (Hons))</div>
+      <div class="content-padding">
+        
+        <div class="list-item">
+          <div class="logo-box">
+             <img src="images/macquarie.png" alt="MGSM" onerror="this.style.display='none'; this.parentNode.innerText='MG'">
+          </div>
+          <div class="item-content">
+            <h3 class="item-title">Macquarie Graduate School of Management</h3>
+            <div class="item-subtitle">Master of Business Administration (M.B.A.)</div>
+          </div>
+        </div>
+        
+        <div class="list-item">
+          <div class="logo-box">
+             <img src="images/otago.png" alt="Otago" onerror="this.style.display='none'; this.parentNode.innerText='UO'">
+          </div>
+          <div class="item-content">
+            <h3 class="item-title">University of Otago</h3>
+            <div class="item-subtitle">Masters of Commerce (MCom)</div>
+          </div>
+        </div>
+        
+        <div class="list-item">
+          <div class="logo-box">
+             <img src="images/richmond.png" alt="Richmond" onerror="this.style.display='none'; this.parentNode.innerText='UR'">
+          </div>
+          <div class="item-content">
+            <h3 class="item-title">University of Richmond</h3>
+            <div class="item-subtitle">University Exchange, International Business</div>
+          </div>
+        </div>
+
       </div>
     </section>
 
-    <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem;">
-        
-        <section class="card" id="skills">
-          <div class="section-head">
-            <h2>Top Skills</h2>
-            <a href="https://www.linkedin.com/in/andrew-mitchell-corpdev/details/skills/" target="_blank" class="linkedin-link">
-              View on LinkedIn
-              <svg viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5c-1.11 0-2 .89-2 2v14c0 1.11.89 2 2 2h14c1.11 0 2-.89 2-2v-7h-2v7z"/></svg>
-            </a>
-          </div>
-          <div class="skills-grid">
-            <span class="skill-tag">New Business Opportunities</span>
-            <span class="skill-tag">Thought Leadership</span>
-            <span class="skill-tag">People Management</span>
-            <span class="skill-tag">Corporate Development</span>
-            <span class="skill-tag">M&A</span>
-            <span class="skill-tag">Financial Modeling</span>
-            <span class="skill-tag">Strategy</span>
-            <span class="skill-tag">Deal Execution</span>
-          </div>
-        </section>
-
-        <section class="card">
-          <h2>Honors & Awards</h2>
-          <ul class="awards-list">
-            <li>Deal of the Year Award 2008 [cite: 9]</li>
-            <li>Customer & Product Capability Award [cite: 9]</li>
-            <li>Innovation Award [cite: 10]</li>
-            <li>Otago School of Business Research Scholarship [cite: 11]</li>
-            <li>Nestlé University of Otago School of Business Scholarship [cite: 12]</li>
-          </ul>
-        </section>
-
-        <section class="card">
-            <h2>Publications</h2>
-            <ul class="publications-list">
-              <li>Market-focussed Resources, Strategy and Market Position for Small Firms [cite: 14]</li>
-              <li>Configuring Competitive Strategies, Resources and Market Positions: An Exploratory Examination of New Zealand High Growth Small Firms [cite: 15]</li>
-            </ul>
-        </section>
-
-    </div>
+    <section class="card">
+      <div class="section-header">
+        <h2 class="section-title">Skills & Awards</h2>
+      </div>
+      <div class="content-padding">
+        <div class="skills-container" style="padding:0 0 16px 0;">
+          <span class="skill-pill">Corporate Development</span>
+          <span class="skill-pill">M&A Execution</span>
+          <span class="skill-pill">Financial Modeling</span>
+          <span class="skill-pill">Strategy</span>
+          <span class="skill-pill">Deal Origination</span>
+          <span class="skill-pill">Due Diligence</span>
+          <span class="skill-pill">People Management</span>
+        </div>
+        <p style="font-size: 14px; color: var(--text-main);">
+          <strong>Honors:</strong> Deal of the Year Award 2008 • Customer & Product Capability Award • Innovation Award
+        </p>
+      </div>
+    </section>
 
     <footer>
       <p>© 2026 Andrew Mitchell. All rights reserved.<br>
