@@ -1,9 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
   <url>
     <loc>https://mitanz007.github.io/Andrew-Mitchell-CorpDev/</loc>
-    <lastmod>2026-01-17</lastmod>
+    <lastmod>2026-01-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://mitanz007.github.io/Andrew-Mitchell-CorpDev/images/First%201.png</image:loc>
+      <image:title>Andrew Mitchell Executive Summary</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mitanz007.github.io/Andrew-Mitchell-CorpDev/images/Second%202.png</image:loc>
+      <image:title>Andrew Mitchell Career Timeline</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mitanz007.github.io/Andrew-Mitchell-CorpDev/images/Third%203.png</image:loc>
+      <image:title>Transaction Volume Statistics</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://mitanz007.github.io/Andrew-Mitchell-CorpDev/files/Portfolio_Experience.pdf</loc>
+    <lastmod>2026-01-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mitanz007.github.io/Andrew-Mitchell-CorpDev/files/Ampol_Summary.pdf</loc>
+    <lastmod>2026-01-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
