@@ -1,0 +1,11 @@
+/* TEAM */
+Name: Andrew Mitchell
+Title: Head of Corporate Development
+Location: Sydney, Australia
+LinkedIn: https://www.linkedin.com/in/andrew-mitchell-corpdev
+Portfolio: https://andrew-mitchell-executive-portfolio-704555970617.us-west1.run.app/
+
+/* SITE CONF */
+Last update: 2026/01/21
+Software: GitHub Pages
+Standards: HTML5, CSS3, JSON-LD
